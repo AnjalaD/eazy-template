@@ -5,6 +5,27 @@
 @layer components {
   input,
   textarea {
-    @apply bg-gray-50 border-2 rounded p-2;
+    @apply bg-gray-50 border-2 rounded-xl p-2;
+  }
+
+  button {
+    @apply bg-green-700 text-white rounded-xl py-1 px-2;
+  }
+  button:active {
+    @apply bg-green-600 text-white;
+  }
+  button:hover {
+    @apply bg-green-800 text-white;
+  }
+  button:disabled {
+    @apply bg-green-100 text-gray-500;
+  }
+
+  .btn-group button:not(:first-child) {
+    @apply rounded-l-none;
+  }
+
+  .btn-group button:not(:last-child) {
+    @apply rounded-r-none;
   }
 }
